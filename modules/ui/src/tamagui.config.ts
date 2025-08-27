@@ -1,7 +1,13 @@
 import { createTamagui } from 'tamagui';
 import { defaultConfig } from '@tamagui/config/v4';
 
-const tamagUiConfig = createTamagui(defaultConfig);
+const tamagUiConfig = createTamagui({
+  ...defaultConfig,
+  settings: {
+    ...defaultConfig.settings,
+    onlyAllowShorthands: false,
+  },
+});
 
 type Conf = typeof tamagUiConfig;
 
