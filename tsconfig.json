@@ -8,6 +8,9 @@
     },
     {
       "path": "./modules/ui"
+    },
+    {
+      "path": "./modules/hooks"
     }
   ]
 }
