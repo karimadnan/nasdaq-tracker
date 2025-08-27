@@ -2,6 +2,7 @@
 // import styles from './app.module.css';
 import { CardsGrid, StocksCard, tamagUiConfig, TopBar } from '@org/ui';
 import { TamaguiProvider } from '@tamagui/core';
+import { Input } from 'tamagui';
 
 const stocks = [
   {
@@ -149,7 +150,17 @@ const stocks = [
 export function App() {
   return (
     <TamaguiProvider config={tamagUiConfig} defaultTheme="light">
-      <TopBar leading={'Hi'} content={'yes'} />
+      <TopBar
+        leading={'Hi'}
+        content={
+          <Input
+            placeholder="Search"
+            size="$4"
+            borderWidth={2}
+            width={'100%'}
+          />
+        }
+      />
       <CardsGrid
         data={stocks}
         keyExtractor={(record) => record.ticker}
