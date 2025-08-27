@@ -5,6 +5,9 @@
   "references": [
     {
       "path": "./apps/nasdaq-tracker-mobile"
+    },
+    {
+      "path": "./modules/ui"
     }
   ]
 }

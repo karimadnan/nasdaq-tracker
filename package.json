@@ -17,6 +17,7 @@
     "@nx/eslint-plugin": "21.4.1",
     "@nx/jest": "21.4.1",
     "@nx/js": "21.4.1",
+    "@nx/react": "21.4.1",
     "@nx/react-native": "21.4.1",
     "@nx/vite": "21.4.1",
     "@nx/web": "21.4.1",
@@ -66,6 +67,7 @@
     "vitest": "^3.0.0"
   },
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "modules/*"
   ]
 }
