@@ -1,13 +1,12 @@
 // Uncomment this line to use CSS modules
 // import styles from './app.module.css';
-import tamagUIConfig from '../tamagui.config.';
-import NxWelcome from './nx-welcome';
 import { TamaguiProvider } from '@tamagui/core';
+import { tamagUiConfig } from '@nasdaq-tracker/ui/tamagui.config';
 
 export function App() {
   return (
-    <TamaguiProvider config={tamagUIConfig}>
-      <NxWelcome title="nasdaq-tracker-web" />
+    <TamaguiProvider config={tamagUiConfig}>
+      <h1>testss</h1>
     </TamaguiProvider>
   );
 }

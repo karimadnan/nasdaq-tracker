@@ -1,6 +1,7 @@
 {
   "name": "@org/nasdaq-tracker-web",
   "version": "0.0.1",
+  "type": "module",
   "private": true,
   "nx": {
     "name": "nasdaq-tracker-web"
