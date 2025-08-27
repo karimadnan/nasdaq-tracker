@@ -1,5 +1,5 @@
-import { NasdaqStockRecord } from '@org/types';
-import { ComponentPropsWithRef } from 'react';
+import type { NasdaqStockRecord } from '@org/types';
+import type { ComponentPropsWithRef } from 'react';
 import { Card, H3 } from 'tamagui';
 
 type Props = ComponentPropsWithRef<typeof Card> & {
@@ -10,14 +10,14 @@ export function StocksCard({ record, ref, ...cardRest }: Props) {
   return (
     <Card
       elevate
-      size="$4"
       bordered
-      hoverStyle={{ scale: 1.02 }}
       height={150}
       width={350}
+      maxW={'40%'}
       ref={ref}
       justify="center"
       items="center"
+      borderRadius={30}
       {...cardRest}
     >
       <Card.Background />
