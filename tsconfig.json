@@ -17,6 +17,9 @@
     },
     {
       "path": "./apps/nasdaq-tracker-web"
+    },
+    {
+      "path": "./modules/api"
     }
   ]
 }
