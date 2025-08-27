@@ -1,4 +1,4 @@
-import { createTamagui } from '@tamagui/core';
+import { createTamagui } from 'tamagui';
 import { defaultConfig } from '@tamagui/config/v4';
 
 const tamagUiConfig = createTamagui(defaultConfig);
@@ -6,7 +6,7 @@ const tamagUiConfig = createTamagui(defaultConfig);
 type Conf = typeof tamagUiConfig;
 
 // make imports typed
-declare module '@tamagui/core' {
+declare module 'tamagui' {
   interface TamaguiCustomConfig extends Conf {}
 }
 
