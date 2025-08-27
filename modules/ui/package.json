@@ -13,5 +13,8 @@
   },
   "nx": {
     "name": "ui"
+  },
+  "dependencies": {
+    "@tamagui/core": "^1.132.23"
   }
 }
