@@ -28,7 +28,7 @@
           "watchDepsName": "watch-deps"
         }
       },
-      "exclude": ["modules/hooks/*"]
+      "exclude": ["modules/hooks/*", "modules/types/*"]
     },
     {
       "plugin": "@nx/react-native/plugin",
@@ -83,7 +83,7 @@
     },
     {
       "plugin": "@nx/js/typescript",
-      "include": ["modules/hooks/*"],
+      "include": ["modules/hooks/*", "modules/types/*"],
       "options": {
         "typecheck": {
           "targetName": "typecheck"
