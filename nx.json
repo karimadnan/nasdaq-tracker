@@ -14,9 +14,6 @@
     ],
     "sharedGlobals": []
   },
-  "sync": {
-    "applyChanges": true
-  },
   "plugins": [
     {
       "plugin": "@nx/js/typescript",

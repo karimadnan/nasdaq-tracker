@@ -1,7 +1,7 @@
 // Uncomment this line to use CSS modules
 // import styles from './app.module.css';
+import { tamagUiConfig } from '@org/ui';
 import { TamaguiProvider } from '@tamagui/core';
-import { tamagUiConfig } from '@nasdaq-tracker/ui/tamagui.config';
 
 export function App() {
   return (
