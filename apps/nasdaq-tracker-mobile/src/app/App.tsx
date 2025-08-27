@@ -12,12 +12,23 @@ import {
 } from 'react-native';
 import Svg, { G, Path } from 'react-native-svg';
 
+import { TamaguiProvider, createTamagui } from '@tamagui/core';
+import { defaultConfig } from '@tamagui/config/v4';
+
+const config = createTamagui(defaultConfig);
+
+type TamagUIConfig = typeof config;
+
+declare module '@tamagui/core' {
+  interface TamaguiCustomConfig extends TamagUIConfig {}
+}
+
 export const App = () => {
   const [whatsNextYCoord, setWhatsNextYCoord] = useState<number>(0);
   const scrollViewRef = useRef<null | ScrollView>(null);
 
   return (
-    <>
+    <TamaguiProvider config={config}>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView
         style={{
@@ -593,7 +604,7 @@ export const App = () => {
           </View>
         </ScrollView>
       </SafeAreaView>
-    </>
+    </TamaguiProvider>
   );
 };
 const styles = StyleSheet.create({
