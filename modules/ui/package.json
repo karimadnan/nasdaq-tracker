@@ -13,9 +13,5 @@
   },
   "nx": {
     "name": "ui"
-  },
-  "dependencies": {
-    "@tamagui/config": "^1.132.23",
-    "@tamagui/core": "^1.132.23"
   }
 }
