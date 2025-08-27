@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { XStack, View } from 'tamagui';
+import { XStack, View, Text } from 'tamagui';
 
 type Props = {
   leading: ReactNode;
@@ -11,12 +11,18 @@ export function TopBar({ leading, content, trailing }: Props) {
   return (
     <XStack
       justify="space-between"
-      background="magenta"
+      background="grey"
       marginBlockEnd="$5"
       paddingBlock="$5"
+      flexWrap="wrap"
+      borderBottomRightRadius={30}
+      borderBottomLeftRadius={30}
+      gap={15}
     >
       <View>{leading}</View>
-      <View>{content}</View>
+      <View width={500} maxW={'100%'} paddingHorizontal={15}>
+        {content}
+      </View>
       <View>{trailing}</View>
     </XStack>
   );
