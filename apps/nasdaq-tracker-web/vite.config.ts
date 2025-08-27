@@ -17,15 +17,11 @@ export default defineConfig(() => ({
   plugins: [
     react(),
     tamaguiPlugin({
-      config: 'src/tamagui.config.ts',
+      config: './tamag-ui-config',
       components: ['tamagui'],
       optimize: true,
     }),
   ].filter(Boolean),
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [ nxViteTsPaths() ],
-  // },
   build: {
     outDir: './dist',
     emptyOutDir: true,
