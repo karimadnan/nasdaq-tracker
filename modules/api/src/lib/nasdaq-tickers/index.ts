@@ -11,12 +11,21 @@ type TickersResponse = {
 
 type TickersRequestParams = {
   pageParam?: string;
+  queryKey: (string | null)[];
 };
 
-export async function fetchTickers({ pageParam }: TickersRequestParams) {
+export async function fetchTickers({
+  pageParam,
+  queryKey,
+}: TickersRequestParams) {
   const res = await getApi().get<TickersResponse>(
     pageParam ??
-      'v3/reference/tickers?market=stocks&active=true&order=asc&limit=100&sort=ticker'
+      'v3/reference/tickers?market=stocks&active=true&order=asc&limit=100&sort=ticker',
+    {
+      params: {
+        search: queryKey[1],
+      },
+    }
   );
   return res.data;
 }
