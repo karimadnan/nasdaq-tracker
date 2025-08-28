@@ -28,6 +28,7 @@ export function SearchInput() {
       size="$4"
       borderWidth={2}
       width={'100%'}
+      fontSize={16}
     />
   );
 }
