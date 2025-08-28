@@ -3,6 +3,7 @@ import { Image } from 'tamagui';
 export function TopBarLogo() {
   return (
     <>
+      {/* Show full logo on bigger screens */}
       <Image
         marginStart={10}
         display="none"
@@ -16,6 +17,7 @@ export function TopBarLogo() {
         }}
       />
 
+      {/* Show only symbol on smaller screens */}
       <Image
         marginStart={10}
         display="block"
