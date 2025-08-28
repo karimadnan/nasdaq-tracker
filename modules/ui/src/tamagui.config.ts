@@ -7,6 +7,14 @@ const tamagUiConfig = createTamagui({
     ...defaultConfig.settings,
     onlyAllowShorthands: false,
   },
+  tokens: {
+    ...defaultConfig.tokens,
+    color: {
+      primary: '#0090BA',
+      foreground: '#08062a',
+      accent: '#707070',
+    },
+  },
 });
 
 type Conf = typeof tamagUiConfig;
