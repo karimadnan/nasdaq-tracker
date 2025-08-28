@@ -4,11 +4,16 @@ This repository is an Nx monorepo containing two applications:
 
 nasdaq-tracker-web – A web app built with React + Vite
 
-To serve the web app locally you need to configure your .env file with the following keys
+To serve the web app locally you need to:
 
-`VITE_API_URL= Your base API domain
+1- configure your .env file with the following keys
+
+```
+VITE_API_URL= Your base API domain
 VITE_API_TOKEN= Your Polygon API key
-`
+```
+
+2- run `npx nx run nasdaq-tracker-web:serve`
 
 nasdaq-tracker-mobile – A mobile app built with React Native
 
