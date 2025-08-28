@@ -3,6 +3,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../modules/constants"
+    },
+    {
       "path": "../../modules/hooks"
     },
     {
