@@ -9,7 +9,7 @@ type Props<T> = {
 
 export function CardsGrid<T>({ data, keyExtractor, renderItem }: Props<T>) {
   return (
-    <XStack flexWrap="wrap" gap="$4" justify="center">
+    <XStack flexWrap="wrap" gap="$4" justify="center" marginBottom={20}>
       {data.map((record, index) => (
         <Fragment key={keyExtractor(record)}>
           {renderItem(record, index)}
