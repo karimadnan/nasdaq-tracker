@@ -3,6 +3,12 @@
   "include": [],
   "references": [
     {
+      "path": "../../modules/hooks"
+    },
+    {
+      "path": "../../modules/api"
+    },
+    {
       "path": "../../modules/ui"
     },
     {
