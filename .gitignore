@@ -121,3 +121,5 @@ vitest.config.*.timestamp*
 
 **/tamagui.config.cjs
 **/tamagui.config.json
+
+.env
