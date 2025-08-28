@@ -1,1 +1,2 @@
-export * from './lib/hooks.js';
+export { useIntersectionObserver } from './lib/useIntersectionObserver.js';
+export { useDebounce } from './lib/useDebounce.js';
