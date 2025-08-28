@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { XStack, View, Text } from 'tamagui';
+import { XStack, View } from 'tamagui';
 
 type Props = {
   leading: ReactNode;
@@ -20,7 +20,13 @@ export function TopBar({ leading, content, trailing }: Props) {
       gap={15}
     >
       <View>{leading}</View>
-      <View width={500} maxW={'100%'} paddingHorizontal={15}>
+      <View
+        $lg={{ width: 700 }}
+        width="100%"
+        maxW={'100%'}
+        justify="center"
+        paddingHorizontal={15}
+      >
         {content}
       </View>
       <View>{trailing}</View>
