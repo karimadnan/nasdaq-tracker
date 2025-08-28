@@ -2,11 +2,13 @@ import { fetchTickers } from '@org/api';
 import { useIntersectionObserver } from '@org/hooks';
 import { CardsGrid, SkeletonCard, StocksCard } from '@org/ui';
 import { useInfiniteQuery } from '@tanstack/react-query';
+import { REACT_QUERY_KEYS, SEARCH_QUERY_KEY } from '@org/constants';
+import { useSearchParams } from 'react-router';
 
 function CardsSkeleton() {
   return (
     <CardsGrid
-      data={Array.from({ length: 20 }).map((_, index) => index)}
+      data={Array.from({ length: 100 }).map((_, index) => index)}
       keyExtractor={(record) => record}
       renderItem={() => (
         <SkeletonCard
@@ -25,9 +27,12 @@ function CardsSkeleton() {
 const INTERSECTION_POINT = 4;
 
 export function StocksPage() {
+  const [searchParams] = useSearchParams();
+  const searchKey = searchParams.get(SEARCH_QUERY_KEY);
+
   const { data, fetchNextPage, isFetching, isFetchingNextPage } =
     useInfiniteQuery({
-      queryKey: ['nasdaq-tickers'],
+      queryKey: [REACT_QUERY_KEYS.fetchTickers, searchKey],
       queryFn: fetchTickers,
       getNextPageParam: (lastPage) => lastPage.next_url ?? undefined,
       initialPageParam: undefined,
